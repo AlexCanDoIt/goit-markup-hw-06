@@ -736,24 +736,50 @@ body {
 }
 
 .footer-form-element {
+  position: relative;
   display: flex;
 }
 
 .footer-form-mail {
   width: 358px;
   height: 50px;
+  padding-left: 15px;
   margin-right: 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   background-color: transparent;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form-mail:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+.footer-form-mail::placeholder {
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form-mail:focus::placeholder {
+  color: var(--text-dark-theme-color);
 }
 
 .footer-form-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: left;
   width: 200px;
   height: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
   border: none;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -766,12 +792,20 @@ body {
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.06em;
-
-  color: #FFFFFF;
+  color: var(--title-dark-theme-color);
 }
 
-.footer-form {
-  position: relative;
+.footer-form-element::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 25px;
+
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/footer/icon-send.svg);
+  transform: translate(0, -50%);
+  pointer-events: none;
 }
 /* ========== End Footer ========== */
 
@@ -830,12 +864,14 @@ body {
   cursor: pointer;
   background-color: #FFFFFF;
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   fill: var(--accent-color);
+  border-color: var(--accent-color);
+  outline: none;
 }
 
 .form-title {
@@ -852,9 +888,11 @@ body {
   color: var(--title-white-theme-color);
 }
 
-.form-field {
+.label {
+  position: relative;
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
 
   font-family: var(--main-font);
   font-style: normal;
@@ -865,34 +903,51 @@ body {
   color: var(--text-white-theme-color);
 }
 
-.form-field:nth-child(-n+4) {
-  margin-bottom: 10px;
-}
-
-.form-field:nth-child(5) {
+.label:nth-child(5) {
   margin-bottom: 20px;
 }
 
-.label {
+.label-text {
   margin-bottom: 4px;
 }
 
 .input {
   width: 448px;
   height: 40px;
-  border-radius: 4px;
+  padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-icon {
+  position: absolute;
+  left: 12px;
+  bottom: 11px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+.input:focus + .form-icon {
+  fill: var(--accent-color);
 }
 
 .form-input-comment {
   resize: none;
   width: 448px;
   height: 120px;
-  border-radius: 4px;
+  padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 }
 
-::placeholder {
+form::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 
