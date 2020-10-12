@@ -333,7 +333,7 @@
         </address>
       </div>
       <div class="footer-icon-conteiner">
-        <h2 class="footer-icon-title">Присоединяйтесь</h2>
+        <b class="footer-icon-title">Присоединяйтесь</b>
         <ul class="list footer-icon-list">
           <li class="footer-icon-list-item">
             <a class="link footer-icon-list-link" href="">
@@ -365,6 +365,13 @@
           </li>
         </ul>
       </div>
+      <form class="footer-form">
+        <b class="footer-form-title">Подпишитесь на рассылку</b>
+        <div class="footer-form-element">
+          <input class="footer-form-mail" type="email" name="footer-mail" placeholder="E-mail">
+          <button class="footer-form-btn" type="submit">Подписаться</button>
+        </div>
+      </form>
     </div>
   </footer>
   <!--Backdrop And Modal-->
@@ -375,9 +382,32 @@
           <use href="./images/sprite.svg#icon-modal-close-btn"></use>
         </svg>
       </button>
+      <form class="form js-speaker-form">
+        <b class="form-title">Оставьте свои данные, мы вам перезвоним</b>
+        <div class="form-field">
+          <label class="label form-label-name" for="name">Имя</label>
+          <input class="input form-input-name" type="text" name="name" id="name" autofocus>
+        </div>
+        <div class="form-field">
+          <label class="label form-label-tel" for="tel">Телефон</label>
+          <input class="input form-input-tel" type="tel" name="tel" id="tel">
+        </div>
+        <div class="form-field">
+          <label class="label form-label-mail" for="mail">Почта</label>
+          <input class="input form-input-mail" type="email" name="mail" id="mail">
+        </div>
+        <div class="form-field">
+          <label class="label form-label-comment" for="comment">Комментарий</label>
+          <textarea class="input form-input-comment" name="comment" id="comment" placeholder="Введите текст"></textarea>
+        </div>
+        <input class="form-input-policy" type="checkbox" name="policy" id="policy">
+        <label class="form-label-policy" for="policy">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></label>
+        <button class="form-submit-btn" type="submit">Оставить</button>
+      </form>
     </div>
   </div>
   <script src="./js/modal.js"></script>
+  <script src="./js/speaker-form.js"></script>
 </body>
 
 </html>
