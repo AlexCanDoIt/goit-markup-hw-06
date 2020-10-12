@@ -865,12 +865,12 @@ body {
   color: var(--text-white-theme-color);
 }
 
-.form-field:not(:last-child) {
+.form-field:nth-child(-n+4) {
   margin-bottom: 10px;
 }
 
-div.form-field:last-child {
-  margin-bottom: 10px;
+.form-field:nth-child(5) {
+  margin-bottom: 20px;
 }
 
 .label {
