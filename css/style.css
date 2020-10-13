@@ -990,6 +990,11 @@ form::placeholder {
   border-color: var(--accent-color);
 }
 
+.form-label-policy > a {
+  display: inline-block;
+  margin-left: 4px;
+}
+
 .form-submit-btn {
   display: flex;
   justify-content: center;
