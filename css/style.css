@@ -952,7 +952,9 @@ form::placeholder {
 }
 
 .form-label-policy {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 30px;
 
   font-family: var(--main-font);
@@ -972,13 +974,20 @@ form::placeholder {
 }
 
 .form-icon-policy {
-  display: block;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
   border: 2px solid var(--title-white-theme-color);
-  border-radius: 4px;
+  border-radius: 2px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
-.form-icon-policy:checked {
-
+.form-input-policy:checked + .form-icon-policy{
+  background-color: var(--accent-color);
+  background-image: url(../images/main/index/modal/icon-modal-ok.svg);
+  border-color: var(--accent-color);
 }
 
 .form-submit-btn {
