@@ -964,6 +964,23 @@ form::placeholder {
   color: var(--text-white-theme-color);
 }
 
+.form-input-policy {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.form-icon-policy {
+  display: block;
+  border: 2px solid var(--title-white-theme-color);
+  border-radius: 4px;
+}
+
+.form-icon-policy:checked {
+
+}
+
 .form-submit-btn {
   display: flex;
   justify-content: center;
